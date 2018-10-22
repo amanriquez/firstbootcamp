@@ -1,0 +1,59 @@
+
+body {
+    background: rgb(125, 198, 295);
+    color: rgb(45,45,45);
+    padding: 10px;
+    font-family: monospace
+    
+    
+}
+
+header{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#all-contents {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* navigation menu */
+
+nav {
+    background: rgb(32, 53, 68);
+    margin: 0 auto;
+    display: flex;
+    padding: 10px;
+}
+
+nav header{
+    display: flex;
+    align-items: center;
+    color: rgb(255,255,255);
+    flex: 1;
+}
+
+nav ul{
+    list-style-image: none;
+    
+}
+
+nav li{
+    display: inline-block;
+    padding: 0 10px;
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+/* Main container area beneath menu */
+
+main{
+    background: rgb(245,238,219);
+    display: flex;
+    
+}
