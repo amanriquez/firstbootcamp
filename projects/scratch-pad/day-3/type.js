@@ -15,11 +15,12 @@
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+   return Array.isArray(value);
     
     // YOUR CODE ABOVE HERE //
 }
+
+
 
 /** 
  * Given an input value, return true if the value is an Object intended as a 
@@ -32,9 +33,18 @@ function isArray(value) {
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
-    
+if(Array.isArray(value)){
+    return false;
+} else if (value === null) {
+    return false;
+} else if (value instanceof Date) {
+    return false;
+} else if (typeof value ==='object') {
+    return true;
+}
+
+return false;
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -47,7 +57,16 @@ function isObject(value) {
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
     
-    
+  if (value === null) {
+    return false;
+} else if (value instanceof Date) {
+    return false;
+} else if (typeof value ==='object' || Array.isArray(value)) {
+    return true;
+}
+
+return false;
+
     
     
     // YOUR CODE ABOVE HERE //
@@ -76,10 +95,37 @@ function typeOf(value) {
     // YOUR CODE BELOW HERE //
     
     
+    var answer;
+
+        if (typeof(value) === 'number') {
+            answer = 'number';
+        } else if (typeof(value) === 'function'){
+            answer = 'function';
+        } else if (typeof(value) === 'string'){
+            answer = 'string';
+        } else if (typeof(value) === 'boolean'){
+            answer = 'boolean';
+        } else if (Array.isArray(value)){
+            answer = 'array';
+        } else if (typeof(value)=== 'undefined'){
+            answer = 'undefined';
+        } else if (value instanceof Date){
+            answer = 'date';
+        } else if (value === null){
+            answer = 'null';
+        } else if (typeof(value) === 'object'){
+            answer = 'object';
+        }
+
+
+        return answer;
+
+}
+
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&

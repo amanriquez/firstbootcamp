@@ -24,13 +24,23 @@
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     
-    
-    
-    
+    let coolArray = [];
+
+    if (start < end){
+        for (var i = start; i <= end; i++){
+            coolArray.push(i);
+        }    
+    } else if (start > end) {
+        for (var i = start; i >= end; i--){
+            coolArray.push(i);
+        }
+        return coolArray;
+    }
+
+   
+    return coolArray;
     // YOUR CODE GOES ABOVE HERE //
 }
-
-
 
 
 
