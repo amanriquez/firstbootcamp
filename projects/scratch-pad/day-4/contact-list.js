@@ -71,16 +71,19 @@ function makeContactList() {
     }
         },
         printAllContactNames: function() {
-        // all = contacts[i].nameFirst + ' ' + contacts[i].nameLast
-        
-        var todo = '';
-        
-              for (var i = 0; i < contacts.length; i++){
-                var all =  contacts[i].nameFirst + ' ' + contacts[i].nameLast + '\n';
-            }
-            todo = all.slice(0, -1);
             
-          return todo;
+            var allFriends= [];
+            var str;
+
+              for (var i = 0; i < contacts.length; i++) {
+            
+                 allFriends.push(contacts[i].nameFirst + ' ' + contacts[i].nameLast);
+            }
+        
+        str = allFriends.join('\n');
+        console.log(str);
+        return str;
+
         },
         length: function() {
             return contacts.length;
@@ -88,7 +91,7 @@ function makeContactList() {
     }
 }
 
-
+// return str.slice(0, -1);
 
 
 // YOUR CODE GOES ABOVE HERE //

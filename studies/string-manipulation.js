@@ -5,7 +5,7 @@
 	  as objects when executing methods and properties" -W3schols
 */
 
-// Operators 
+// Operators //
 
 
 /*
@@ -35,21 +35,33 @@ var pos = str.lastIndexOf('word');
 
 console.log(pos); // 20
 
-/*
-- both indexOf() and lastIndexOf() return -1 if text is not found
-- both methods accept a second parameter as starting position for search
+/**
+ * 
+ *- both indexOf() and lastIndexOf() return -1 if text is not found
+ * - both methods accept a second parameter as starting position for search
+ *
 */
 
-// search() searches for a specified value and returns position of match
-var str = "do locate where 'locate' occurs!";
-var pos = str.search("locate");
+/** 
+ * - search() searches for a specified value and returns position of match
+ * - search value can be a string or a regular expression
+ * - method returns -1 if item is not found 
+ * 
+ * 
+*/
 
-console.log(pos); // 7
+
+
+let sentencia = "find me where am I";
+var pos = str.search("me");
+
+console.log(pos); // prints => 5
 
 /*
-Differences between indexOf() and search():
-	a) search() does not accept second parameter
-	b) indexOf cannot take powerful search values (regular expressions).
+*   -Differences between indexOf() and search():
+*	a) search() does not accept second parameter
+*	b) indexOf cannot take powerful search values (regular expressions).
+*
 */
 
 // slice() extracts a part of a string and returns exctracted part in a new string
@@ -61,16 +73,16 @@ var doo = str.slice(12, 20);
 
 console.log(doo); // Timbuktu
 
-/*
--If parameter is negative, the position is counted from 
-right to left
-- If you omit second parameter, slice() will slice out rest of string
-- Negative positions don't work in IE8
--substring() is same thing but won't take negative indexes,
- AND second parameter specifies length of extracted part
+/**
+ *-If parameter is negative, the position is counted from 
+ *right to left
+ *- If you omit second parameter, slice() will slice out rest of string
+ *- Negative positions don't work in IE8
+ *-substring() is same thing but won't take negative indexes,
+ * AND second parameter specifies length of extracted part
 */
 
-//// splice()
+//// splice() ///
 
 
 

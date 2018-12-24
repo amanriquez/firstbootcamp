@@ -35,27 +35,29 @@
     var myVariable = true;
     myVariable = "someString";
 
-    /*
-- same as binding
-*/
+   
 
-// Variable Scope
+// Variable Scope //
 
 /*
-- the scope of a variable is controlled by the location 
-  of the variable declaration, and defines the part of the
-  program where a particular variable is accessible. 
-- global and local
--any variable outside of a function belongs to global scope, accesible from anywhere.
-- each function has own scope, only available there and nested functions
-- local scope = function scope.
-- ECMA6 supports block level scope (as in for loops) with let, 
--variables with same name can be specified at multiple layers
- of nested scope. in such cases local variables gain priority over global variables
-
+*
+* - also called a binding
+* - the scope of a variable is controlled by the location 
+*   of the variable declaration, and defines the part of the
+*   program where a particular variable is accessible. 
+* - global and local
+* - any variable outside of a function belongs to global scope, 
+*    accesible from anywhere.
+* - each function has own scope, only available there and nested functions
+* - local scope = function scope.
+* - ECMA6 supports block level scope (as in for loops) with let, 
+* -variables with same name can be specified at multiple layers
+* of nested scope. in such cases local variables gain priority over 
+*  global variables
+*
 */
 
-// ex)
+// example //
 
 var test = "I'm global";
 
@@ -71,39 +73,42 @@ testScope();  // I'm local
 
 console.log(test);  //  I'm local (the global variable is reassigned)
 
-// Hoisting
+// Hoisting //
 
 /*
-Javascript's default behavior of moving declarations to the top
-at run time.
-
-1.- Variable Declarations and Function Declarations
-2.- Taken to the top of their scope
-3.- Different Types hoisted differently
-	a) variables: 
-		-only name
-		-can be declared anywhere
-		-available anywhere in scope -  before or after declaration
-		-no value until assigned
-	b)functions: 
-		-name AND body
-		-can be declared anywhere
-		-available anywhere in scope - before or after declarations
-		-assigned value at all times
-
+*
+* Javascript's default behavior of moving declarations to the top
+* at run time.
+*
+* 1.- Variable Declarations and Function Declarations
+* 2.- Taken to the top of their scope
+* 3.- Different Types hoisted differently
+*	  a) variables: 
+*		-only name
+*		-can be declared anywhere
+*		-available anywhere in scope -  before or after declaration
+*		-no value until assigned
+*	  b)functions: 
+*		-name AND body
+*		-can be declared anywhere
+*		-available anywhere in scope - before or after declarations
+*		-assigned value at all times
+*
 */
 
-/// var, let, const
+// var, let,  //
 
-/*
-var
-	a) you can reassign
-	b) has global scope(except if you declare variable inside of function)
-let
-	a) you can reassign
-	b) block scope
-const
-	a) you CANNOT reassign
-	b)block scope
-
+/**
+ * 
+ * var
+ *	a) you can reassign
+ *	b) has global scope(except if you declare variable inside of function)
+ *let
+ *	a) you can reassign
+ *	b) block scope
+ *const
+ *	a) you CANNOT reassign
+ *	b)block scope
+ *
+ * 
 */
